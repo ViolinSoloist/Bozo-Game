@@ -2,10 +2,9 @@ from Placar import Placar
 
 class Bozo:
     def __init__(self):
-        NUM_JOGADAS = 10
-        rodada = 1
+        self.NUM_JOGADAS = 10
+        self.rodada = 1
     
-    @staticmethod
     def main(self):
         seed = int(input("Digite a semente (zero para aleatório): "))
         pl = Placar()
@@ -20,4 +19,4 @@ class Bozo:
 
 
 if __name__ == "__main__":
-    Bozo.main()
+    Bozo().main()
