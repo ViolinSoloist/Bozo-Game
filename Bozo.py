@@ -1,4 +1,5 @@
 from Placar import Placar
+from Dados import Dados
 
 class Bozo:
     def __init__(self):
@@ -15,7 +16,10 @@ class Bozo:
             print("Pressione ENTER para lançar os dados")
             input()
 
-            # TO DO: USAR CLASSE ROLAR E ROLARDADOS PARA ROLAR E IMPRIMIR CONFIGURAÇÃO DOS DADOS
+            dad = Dados()
+            print(dad.rolar())
+            print(dad.toString())
+            
 
 
 if __name__ == "__main__":
