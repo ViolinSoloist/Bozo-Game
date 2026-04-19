@@ -21,7 +21,7 @@ class Placar:
         return lista
 
 
-    def print_placar(self):
+    def printPlacar(self):
         prt_lst = self.__formatPlacarToPrint()
         index = 0
         for _ in range(3):
