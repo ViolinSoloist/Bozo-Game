@@ -21,13 +21,22 @@ class Placar:
         return lista
 
 
-    def printPlacar(self):
+    def __str__(self) -> str:
         prt_lst = self.__formatPlacarToPrint()
         index = 0
+        print_str = ""
         for _ in range(3):
-            print(f"{prt_lst[index]}   |   {prt_lst[index + 6]}   |   {prt_lst[index + 3]}")
-            print("-" * 26)
+            print_str += f"{prt_lst[index]}   |   {prt_lst[index + 6]}   |   {prt_lst[index + 3]}\n"
+            for _ in range(26):
+                print_str += "-"
+            print_str += "\n"
             index += 1
-        print(f"       |   {prt_lst[-1]}   |")
-        print("       +----------+")
-        print()
+        print_str += f"       |   {prt_lst[-1]}   |\n"
+        print_str += "       +----------+\n\n"
+
+        return print_str
+
+    def add(self, pos:int, valores:list[int]) -> None:
+        pass
+    def getScore(self):
+        pass
