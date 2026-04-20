@@ -36,7 +36,21 @@ class Placar:
 
         return print_str
 
+    # ---------------- CHECAGEM DE PONTUAÇÃO -----------------------
+
+    def __checkSeq(valores:list[int]) -> bool:
+        min = valores[0] - 1
+        for valor in valores:
+            if valor > min:
+                return False
+            else:
+                min = valor
+        return True
+
     def add(self, pos:int, valores:list[int]) -> None:
-        pass
+        match pos:
+            case 8:
+                self.__checkSeq(valores)
+
     def getScore(self):
         pass
