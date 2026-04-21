@@ -47,7 +47,8 @@ class Bozo:
                     pos = int(input("Escolha a posição que quer ocupar com essa jogada ===> "))
                     if pos > self.NUM_RODADAS or pos <= 0:
                         pos = 0
-                    pl.add(pos, valores)
+                    if pl.add(pos, valores) == -1:
+                        pos = 0
 	
                 except Exception as erro:
                     pos = 0
@@ -64,7 +65,7 @@ class Bozo:
         
         print("***********************************")
         print("***")
-        print("*** Seu escore final foi: " + pl.getScore())
+        print(f"*** Seu escore final foi: {pl.getScore()}")
         print("***")
         print("***********************************")
 

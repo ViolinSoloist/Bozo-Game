@@ -1,4 +1,4 @@
-import random
+from random import Random
 from Dados import Dados
 
 class RolaDados:
@@ -8,15 +8,16 @@ class RolaDados:
         
         # se tem seed específica, gerador usa a seed, se não, é "aleatório"
         if seed != 0:
-            random.seed(seed)
+            rd = Random()
+            rd.seed(seed)
             
         # cria quantidade de dados @param quantidade
         for _ in range(quantidade):
             if seed == 0:
-                self.dados.append(Dados(6)) # Dado aleatório
+                self.dados.append(Dados()) # Dado aleatório
             else:
                 # Se tem seed, criamos uma "sub-semente" aleatória para cada dado
-                self.dados.append(Dados(6, random.randint(1, 100000)))
+                self.dados.append(Dados(6, rd.randint(1, 10000)))
 
     def rolar(self, quais=None) -> list[int]:
         # Rola todos os dados (Primeira jogada)
