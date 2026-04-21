@@ -1,3 +1,11 @@
-## Execute apenas o arquivo "Bozo.py"
+## Instruções para execução do programa
 
-```python 3 Bozo.py``
+Execute o programa através do Makefile:
+```
+make run
+```
+
+Ou diretamente com o Python (certifique-se de estar no diretório correto):
+```
+python3 Bozo.py
+```

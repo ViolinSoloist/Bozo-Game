@@ -1,5 +1,5 @@
-from Placar import Placar
-from RolarDados import RolaDados
+from project_files.Placar import Placar
+from project_files.RolarDados import RolaDados
 
 
 class Bozo:
@@ -54,8 +54,7 @@ class Bozo:
                     pos = 0
 				
                 if ( pos == 0 ):
-                    print("Valor inválido. Posição ocupada ou inexistente.")
-			
+                    print("Valor inválido. Posição ocupada ou inexistente.")		
 			
             print("\n\n")
             print(pl)
