@@ -1,6 +1,8 @@
 # Bozó (Jogo de Dados 🎲) 
 
-## Instruções para execução do programa
+## Informações e instruções sobre o programa
+
+Desenvolvivo com foco em Programação Orientada a Objetos, usando a linguagem Python.
 
 Execute o programa através do Makefile (no diretório raíz):
 ```
