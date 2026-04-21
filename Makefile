@@ -1,13 +1,15 @@
 .PHONY: all run clean zip
 
-LOCAL: project_files/
+LOCAL = project_files/
 
 all:
 	# does nothing
+
 run:
-	python3 $(LOCAL)Bozo.py
+	python3 $(LOCAL)__main__.py
+
 clean:
-	rm *.zip
+	rm -f *.zip
+
 zip:
-	# Formatado para entrega no runcodes
-	zip -r entrega.zip * -x "__pycache__/*" "README.md" ".gitignore"
+	cd project_files && zip -r ../entrega.zip * -x "*__pycache__*"

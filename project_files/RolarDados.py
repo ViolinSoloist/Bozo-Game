@@ -1,5 +1,5 @@
 from random import Random
-from project_files.Dados import Dados
+from Dados import Dados
 
 class RolaDados:
     # CONSTRUTOR

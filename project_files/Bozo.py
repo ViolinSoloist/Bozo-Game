@@ -1,5 +1,5 @@
-from project_files.Placar import Placar
-from project_files.RolarDados import RolaDados
+from Placar import Placar
+from RolarDados import RolaDados
 
 
 class Bozo:
