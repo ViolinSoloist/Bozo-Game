@@ -9,9 +9,9 @@ Execute o programa através do Makefile (no diretório raíz):
 make run
 ```
 
-Ou diretamente com o Python (certifique-se de estar no diretório correto):
+Ou diretamente com o Python (certifique-se de estar no diretório correto, ou seja, em "project_file/"):
 ```
-python3 Bozo.py
+python3 __main__.py
 ```
 
 ## Sobre o jogo

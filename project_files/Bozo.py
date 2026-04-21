@@ -67,6 +67,3 @@ class Bozo:
         print(f"*** Seu escore final foi: {pl.getScore()}")
         print("***")
         print("***********************************")
-
-if __name__ == "__main__":
-    Bozo().main()
