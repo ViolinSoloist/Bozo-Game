@@ -5,19 +5,20 @@ class RolaDados:
     # CONSTRUTOR
     def __init__(self, quantidade: int, seed: int = 0):
         self.dados = []
+        self.seed = seed
         
         # se tem seed específica, gerador usa a seed, se não, é "aleatório"
-        if seed != 0:
+        if self.seed != 0:
             rd = Random()
-            rd.seed(seed)
+            rd.seed(self.seed)
             
         # cria quantidade de dados @param quantidade
         for _ in range(quantidade):
-            if seed == 0:
+            if self.seed == 0:
                 self.dados.append(Dados()) # Dado aleatório
             else:
-                # Se tem seed, criamos uma "sub-semente" aleatória para cada dado
-                self.dados.append(Dados(6, rd.randint(1, 10000)))
+                subseed = rd.randint(1,10000)
+                self.dados.append(Dados(6, subseed))
 
     def rolar(self, quais=None) -> list[int]:
         # Rola todos os dados (Primeira jogada)
@@ -63,6 +64,6 @@ class RolaDados:
         # * -> desempacota a lista, zip -> junta as linhas na horizontal
         for linhas_horizontais in zip(*linhas_por_dado):
             # Junta os 5 dados com um espaço de "    " entre elas
-            resultado += "    ".join(linhas_horizontais) + "\n"
+            resultado += "    ".join(linhas_horizontais) + "    \n"
 
         return resultado

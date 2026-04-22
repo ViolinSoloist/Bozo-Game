@@ -12,4 +12,4 @@ clean:
 	rm -f *.zip
 
 zip:
-	cd project_files && zip -r ../entrega.zip * -x "*__pycache__*"
+	cd project_files && zip -r ../entrega.zip * -x "*__pycache__*" "teste.py"

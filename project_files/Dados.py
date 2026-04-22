@@ -1,19 +1,19 @@
-import random
+from random import Random
 
 class Dados:
-    def __init__(self, lados=6, seed=None):
+    def __init__(self, lados=6, seed=0):
         self.lados = lados
         self.atual = 0
         
-        if seed is not None:
-            random.seed(seed)
-            self.fixed_seed = True
+        if seed == 0:
+            self.gerador = Random() # Aleatório real
         else:
-            self.fixed_seed = False
+            self.gerador = Random(seed) # gerador com seed
+            
+        self.rolar()
 
-    def rolar(self) -> int:
-        self.atual = random.randint(1, self.lados)
-        return self.atual
+    def rolar(self):
+        self.atual = self.gerador.randint(1, self.lados)
     
     def getLado(self) -> int:
         return self.atual

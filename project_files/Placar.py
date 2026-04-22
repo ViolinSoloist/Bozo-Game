@@ -10,14 +10,14 @@ class Placar:
         num = ""
         s = ""
         for i in range(3):
-            num = f"{self.pontos_no_tabuleiro[i]:<4}" if self.posicao_ocupada[i] else f"({i+1}) "
+            num = f" {self.pontos_no_tabuleiro[i]:<3}" if self.posicao_ocupada[i] else f"({i+1}) "
             s +=   num + "   |   "
-            num = f"{self.pontos_no_tabuleiro[i+6]:<4}" if self.posicao_ocupada[i+6] else f"({i+7}) "
-            s +=   num + "   |   "
-            num = f"{self.pontos_no_tabuleiro[i+3]:<4}" if self.posicao_ocupada[i+3] else f"({i+4}) "
-            s+= num + "\n--------------------------\n"
+            num = f" {self.pontos_no_tabuleiro[i+6]:<3}" if self.posicao_ocupada[i+6] else f"({i+7}) "
+            s +=   num + "   |  "
+            num = f" {self.pontos_no_tabuleiro[i+3]:<3}" if self.posicao_ocupada[i+3] else f"({i+4}) "
+            s+= num + "\n-------|----------|-------\n"
 	
-        num = f"{self.pontos_no_tabuleiro[9]:<4}" if self.posicao_ocupada[9] else "(10)"
+        num = f" {self.pontos_no_tabuleiro[9]:<3}" if self.posicao_ocupada[9] else "(10)"
         s += "       |   " + num + "   |"
         s += "\n       +----------+\n"
         return s
