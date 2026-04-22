@@ -50,15 +50,3 @@ class Dados:
         string_dice += self.s_border
 
         return string_dice
-    
-    """ apenas para testar """
-    def main(args):
-        d = Dados(6,1);
-        for i in range(100):
-            d.rolar();
-            print(str(d.getLado()) + "");
-            print(str(i) + ") ");
-            print(d.toString());
-
-
-	
