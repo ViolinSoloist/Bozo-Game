@@ -2,7 +2,7 @@
 
 ## Informações e instruções sobre o programa
 
-Desenvolvivo com foco em Programação Orientada a Objetos, usando a linguagem Python.
+Desenvolvido com foco em Programação Orientada a Objetos, usando a linguagem Python.
 
 Execute o programa através do Makefile (no diretório raíz):
 ```
